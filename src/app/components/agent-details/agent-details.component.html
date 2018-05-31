@@ -1,0 +1,18 @@
+<div class="main-div">
+  <div class="info-div">
+    <div>
+      <button type="button" (click)="viewDetails()" class="buttons">View Details</button>
+    </div>
+    <label>Agent ID:</label> <label class="data-label">{{currentAgent.id}}</label><br>
+    <label>Agent Name:</label> <label class="data-label">{{currentAgent.name.first}} {{currentAgent.name.last}}</label><br>
+    <label>Street:</label> <label class="data-label">{{currentAgent.location.street}}</label><br>
+    <label>City:</label> <label class="data-label">{{currentAgent.location.city}}</label><br>
+    <label>State:</label> <label class="data-label">{{currentAgent.location.state}}</label><br>
+    <label>Post Code:</label> <label class="data-label">{{currentAgent.location.postcode}}</label><br>
+    <label>Email:</label> <label class="data-label">{{currentAgent.email}}</label><br>
+
+    <button type="button" routerLink="track-agents" (click)="trackAgent()" class="buttons">Track Agent</button>
+  </div>
+    
+</div>
+<router-outlet></router-outlet>
